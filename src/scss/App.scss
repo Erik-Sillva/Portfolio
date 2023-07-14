@@ -1,0 +1,86 @@
+#logo {
+    position: relative;
+    margin-left: 20px;
+    font-size: 30px;
+    text-transform: capitalize;
+
+    a {
+        &::before {
+            content: "";
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            bottom: -7px;
+            left: -15px;
+            border-bottom: 5px solid #B809C3;
+            border-left: 5px solid #B809C3;
+        }
+    
+        &::after {
+            content: "";
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: -7px;
+            right: -15px;
+            border-top: 5px solid #B809C3;
+            border-right: 5px solid #B809C3;
+        }
+    }
+}
+
+.container-info {
+    height: 70px;
+    position: relative;
+
+    input, textarea {
+        position: relative;
+        background: transparent !important;
+        height: 60%;
+        bottom: 0;
+        top: 40%;
+
+        &:focus ~ label {
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            color: #B809C3;
+        }
+
+        &:valid ~ label {
+            top: 0;
+            left: 0;
+            font-size: 16px;
+            color: #B809C3;
+        }
+    }
+
+    textarea {
+        resize: none; /* Impede o redimensionamento do textarea */
+        overflow: auto; /* Habilita a rolagem quando necessário */
+        scrollbar-width: none; /* Remove a barra de rolagem do Firefox */
+        -ms-overflow-style: none;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
+    }
+
+    label {
+        position: absolute;
+        top: 60%;
+        left: 0;
+        transition: .5s ease;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background: #1E0B38;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient( #ff56f6, #b936ee, #3bace2, #406aff);
+    border-radius: 10px;
+}
