@@ -23,7 +23,6 @@ const Contact = () => {
                 setName('')
                 setEmail('')
                 setMessage('')
-                alert('Email Enviado')
             } else {
                 alert('Ops... verifique seu email');
                 return;
@@ -58,7 +57,7 @@ const Contact = () => {
                         viewport={{once: false, amount: 0.3}}
                         className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'>
 
-                        <input type="hidden" name="_next" value="http://localhost:5173/"></input>
+                        <input type="hidden" name="_next" value="https://erikdev.site/thankyou"></input>
                         <input type="hidden" name="_captcha" value="false"/>
 
                         <div className='container-info w-full'>
@@ -74,11 +73,11 @@ const Contact = () => {
                         
 
                         <div className='container-info w-full'>
-                            <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' id='msg' name='menssagem' autoComplete='off' required onChange={(e) => setMessage(e.target.value)}></textarea>
-                            <label htmlFor="msg">Menssagem</label>
+                            <textarea className='bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12' id='msg' name='menssage' autoComplete='off' required onChange={(e) => setMessage(e.target.value)}></textarea>
+                            <label htmlFor="msg">Mensagem</label>
                         </div>
 
-                        <button className='btn btn-lg mx-auto mt-[2em]' onClick={handleSubmit}>Enviar Menssagem</button>
+                        <button className='btn btn-lg mx-auto mt-[2em]' onClick={handleSubmit}>Enviar Mensagem</button>
                     </motion.form>
                 </div>
             </div>
