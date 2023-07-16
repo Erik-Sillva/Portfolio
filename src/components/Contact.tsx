@@ -57,7 +57,7 @@ const Contact = () => {
                         viewport={{once: false, amount: 0.3}}
                         className='flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start'>
 
-                        <input type="hidden" name="_next" value="https://www.erikdev.site/thankyou"></input>
+                        <input type="hidden" name="_next" value="erikdev.site/thankyou"></input>
                         <input type="hidden" name="_captcha" value="false"/>
 
                         <div className='container-info w-full'>
