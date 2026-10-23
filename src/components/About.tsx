@@ -13,6 +13,13 @@ import { fadeIn } from '../ts/variants'
 // CV
 import Cv from '../assets/pdf/eriksilva-cv.pdf'
 
+const dataNascimento = 2004
+const anoInicio = 2020;
+const anoAtual = new Date().getFullYear();
+
+const anosExperiencia = anoAtual - anoInicio;
+const idade = anoAtual - dataNascimento;
+
 
 const About = () => {
     const [ref, inView] = useInView({
@@ -43,10 +50,10 @@ const About = () => {
                         <h3 className='h3 mb-4 text-center md:text-left'>Desenvolvedor Web Front-End</h3>
                         <div className='mb-6'>
                             <p>
-                                Me chamo Erik, tenho 19 anos e estou no mundo da programação a pouco mais de 2 anos. Atualmente moro no Brasil e trabalho como Desenvolvedor Web React Freelancer.
+                                Me chamo Erik, tenho {idade} anos e estou no mundo da programação a pouco mais de {anosExperiencia} anos. Atualmente moro no Brasil e trabalho como Desenvolvedor Web.
                             </p>
 
-                            <h4 className='font-tertiary mt-3'>Possuo conhecimento em:</h4>
+                            <h4 className='font-tertiary mt-3'>Possuo conhecimentos em:</h4>
 
                             <div className='flex items-center gap-x-8'>
                             <ul>
@@ -75,7 +82,7 @@ const About = () => {
                             <div className='py-5'>
                                 <div className='text-[40px] py-2 font-tertiary text-gradient mb-2'>
                                     {
-                                        inView ? <CountUp start={0} end={2} duration={3}/> : null
+                                        inView ? <CountUp start={0} end={anosExperiencia} duration={3}/> : null
                                     }
                                 </div>
                                 <div className="font-primary text-sm tracking-[2px]">

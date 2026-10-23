@@ -16,6 +16,11 @@ import {motion} from 'framer-motion'
 // Variants
 import {fadeIn} from '../ts/variants'
 
+const anoInicio = 2020;
+const anoAtual = new Date().getFullYear();
+
+const anosExperiencia = anoAtual - anoInicio;
+
 const Banner = () => {
     return (
         <section className='min-h-[85vh] lg:min-h-[78vh] flex items-center' id="home">
@@ -58,7 +63,7 @@ const Banner = () => {
                             whileInView='show'
                             viewport={{once: false, amount: 0.7}}
                             className='mb-8 max-w-lg mx-auto lg:mx-0'>
-                            Desenvolvedor Web Front-End React com 2 anos de experiência e diversos projetos completos com as melhores e mais usadas tecnologias do mercado!
+                            Desenvolvedor Web Front-End React com {anosExperiencia} anos de experiência e diversos projetos completos com as melhores e mais usadas tecnologias do mercado!
                         </motion.p>
 
                         <motion.div 
